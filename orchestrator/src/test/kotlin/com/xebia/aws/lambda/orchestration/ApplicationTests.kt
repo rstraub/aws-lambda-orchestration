@@ -8,7 +8,7 @@ class ApplicationTests {
 
 	@Test
 	fun callLambda(): Unit = runBlocking {
-		 Orchestration.orchestrate() shouldBe "Thank you for running the pipeline: 1337"
+		 LambdaPipelineStep.run("1337") shouldBe "Thank you for running the pipeline: 1337"
 	}
 
 }

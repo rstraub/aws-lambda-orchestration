@@ -9,11 +9,11 @@ import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 
 data class PipelineRequest(val pipelineId: String)
 
-object Orchestration {
+object LambdaPipelineStep : PipelineStep {
     private val mapper = jacksonObjectMapper()
 
-    suspend fun orchestrate(): String? {
-        val body = PipelineRequest("1337")
+    override suspend fun run(pipelineId: String): String? {
+        val body = PipelineRequest(pipelineId)
         val json = mapper.writeValueAsString(body)
 
         val req = InvokeRequest {
@@ -21,6 +21,7 @@ object Orchestration {
             logType = LogType.Tail
             payload = json.encodeToByteArray()
         }
+
         return LambdaClient {
             region = "us-east-1"
             endpointUrl = Url.parse("http://localhost:4566")

@@ -4,6 +4,6 @@ import kotlinx.coroutines.runBlocking
 
 fun main() {
     runBlocking {
-        Orchestration.orchestrate().let(::println)
+        LambdaPipelineStep.run("1337").let(::println)
     }
 }
