@@ -23,6 +23,10 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("aws.sdk.kotlin:lambda:1.0.58")
+	implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.11")
+	implementation("com.google.code.gson:gson:2.10")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
