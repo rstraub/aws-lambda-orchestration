@@ -1,5 +1,5 @@
 #!/bin/bash
-zip function.zip lambda.js
+zip function.zip index.js
 awslocal lambda create-function \
     --function-name lambda-part \
     --runtime nodejs18.x \
