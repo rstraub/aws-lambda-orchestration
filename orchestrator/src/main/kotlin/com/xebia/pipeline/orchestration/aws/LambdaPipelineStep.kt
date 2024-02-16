@@ -1,4 +1,4 @@
-package com.xebia.aws.lambda.orchestration
+package com.xebia.pipeline.orchestration.aws
 
 import aws.sdk.kotlin.runtime.auth.credentials.StaticCredentialsProvider
 import aws.sdk.kotlin.services.lambda.LambdaClient
@@ -6,6 +6,7 @@ import aws.sdk.kotlin.services.lambda.model.InvokeRequest
 import aws.sdk.kotlin.services.lambda.model.LogType
 import aws.smithy.kotlin.runtime.net.url.Url
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.xebia.pipeline.orchestration.PipelineStep
 
 data class PipelineRequest(val pipelineId: String)
 

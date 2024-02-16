@@ -1,4 +1,4 @@
-package com.xebia.aws.lambda.orchestration
+package com.xebia.pipeline.orchestration
 
 import com.amazonaws.services.lambda.runtime.{Context, RequestStreamHandler}
 

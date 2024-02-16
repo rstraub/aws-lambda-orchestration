@@ -1,4 +1,4 @@
-package com.xebia.aws.lambda.orchestration
+package com.xebia.pipeline.orchestration
 
 interface PipelineStep {
     suspend fun run(pipelineId: String): String?

@@ -1,5 +1,6 @@
-package com.xebia.aws.lambda.orchestration
+package com.xebia.pipeline.orchestration
 
+import com.xebia.pipeline.orchestration.aws.LambdaPipelineStep
 import kotlinx.coroutines.runBlocking
 
 fun main() {

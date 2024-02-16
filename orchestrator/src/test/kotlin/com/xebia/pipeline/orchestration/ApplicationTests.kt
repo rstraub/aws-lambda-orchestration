@@ -1,5 +1,6 @@
-package com.xebia.aws.lambda.orchestration
+package com.xebia.pipeline.orchestration
 
+import com.xebia.pipeline.orchestration.aws.LambdaPipelineStep
 import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test
