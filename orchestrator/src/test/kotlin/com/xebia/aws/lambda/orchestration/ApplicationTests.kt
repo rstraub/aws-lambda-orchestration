@@ -1,13 +1,14 @@
 package com.xebia.aws.lambda.orchestration
 
+import io.kotest.matchers.shouldBe
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Test
 
 class ApplicationTests {
 
 	@Test
-	fun callLambda() {
-		runBlocking { Orchestration.orchestrate() }
+	fun callLambda(): Unit = runBlocking {
+		 Orchestration.orchestrate() shouldBe "Thank you for running the pipeline: 1337"
 	}
 
 }
