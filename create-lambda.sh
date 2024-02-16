@@ -1,8 +1,8 @@
 #!/bin/bash
-zip function.zip index.js
+(cd pipeline; sbt assembly)
 awslocal lambda create-function \
-    --function-name lambda-part \
-    --runtime nodejs18.x \
-    --zip-file fileb://function.zip \
-    --handler index.handler \
+    --function-name lambda-pipeline \
+    --runtime java21 \
+    --zip-file fileb://pipeline/target/scala-2.13/aws.lambda.pipeline-assembly-0.1.0-SNAPSHOT.jar \
+    --handler com.xebia.aws.lambda.orchestration.Pipeline::handleRequest \
     --role arn:aws:iam::000000000000:role/lambda-role

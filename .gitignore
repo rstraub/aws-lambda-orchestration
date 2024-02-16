@@ -4,3 +4,4 @@ target/
 .bsp
 .gradle/
 .DS_STORE
+output.txt
