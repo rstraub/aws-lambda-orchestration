@@ -11,7 +11,7 @@ object Orchestration {
 
     suspend fun orchestrate() {
         val req = InvokeRequest {
-            functionName = "lambda-part"
+            functionName = "lambda-pipeline"
             logType = LogType.Tail
             payload = "{\"pipelineId\": \"10\"}".encodeToByteArray()
         }
