@@ -1,11 +1,11 @@
 package com.xebia.aws.lambda.orchestration
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.runApplication
+import kotlinx.coroutines.runBlocking
 
-@SpringBootApplication
 class Application
 
 fun main(args: Array<String>) {
-	runApplication<Application>(*args)
+    runBlocking {
+        Orchestration.orchestrate()
+    }
 }
